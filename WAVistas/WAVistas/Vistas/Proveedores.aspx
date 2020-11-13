@@ -58,38 +58,46 @@
                             <p>Instrucciones</p>
                         </div>
                         <hr />
-                        <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Insertar un nuevo registro</span></button>
+                      <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Nuevo Proveedor</span></button>
                         <div class="contenido">
                                     <div class="form-group">
                                         <br />
-                                        <label for="exampleFormControlInput1">Email address</label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        <label for="exampleFormControlInput1">ID Proveedor</label>
+                                         <asp:DropDownList ID="DropIdProveedor" runat="server">
+                                         </asp:DropDownList>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Example select</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                        <label for="exampleFormControlInput1">Nombre Proveedor</label>
+                                        <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect2">Example multiple select</label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                        <div class="form-group">
+                                        <label for="exampleFormControlInput1">Contacto Proveedor</label>
+                                          <asp:TextBox ID="txtContacto" runat="server"></asp:TextBox>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Example textarea</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                         <div class="form-group">
+                                         <label for="exampleFormControlInput1">Direccion Proveedor</label>
+                                           <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
+                                    </div> 
+                                         <div class="form-group">
+                                         <label for="exampleFormControlInput1">Telefono Proveedor</label>
+                                           <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
                                     </div>
-                                    <button type="button" class="btn btn-primary btn-block">Insertar</button>
+                                         <div class="form-group">
+                                         <label for="exampleFormControlInput1">Email Proveedor</label>
+                                           <input type="email" class="form-control" id="txtemail" placeholder="name@example.com">
+                                    </div>
+                                          <div class="form-group">
+                                             <label for="exampleFormControlInput1">Nit Proveedor</label>
+                                             <asp:TextBox ID="txtNit" runat="server"></asp:TextBox>
+                                    </div>
+                                             <div class="form-group">
+                                             <label for="exampleFormControlInput1">Estado Proveedor</label>
+                                             <asp:DropDownList ID="DropEstado" runat="server"> </asp:DropDownList>
+                                    </div>
+                                             <div class="form-group">
+                                             <label for="exampleFormControlInput1">Registro Proveedor</label>
+                                    </div>
+                                      <button type="button" class="btn btn-primary btn-block">Insertar</button>
                             <br />
                         </div>
                         

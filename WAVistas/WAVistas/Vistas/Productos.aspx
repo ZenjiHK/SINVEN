@@ -54,41 +54,47 @@
             <div class="col-md-1"></div>
             <div class="col-md-3">
                 <p>
-                    <a class="btn btn-primary btn-block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">Registro</a>
+                     <a class="btn btn-primary btn-block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">Nuevo Producto</a>
                 </p>
                 <div class="row">
                     <div class="col">
                         <div class="collapse multi-collapse" id="multiCollapseExample1">
                             <div class="card card-body">
+                                  
                                     <div class="form-group">
-                                        <label for="exampleFormControlInput1">Email address</label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        <label for="exampleFormControlSelect1">ID Proveedor</label>
+                                        <asp:DropDownList ID="DropIdProveedor" runat="server"> </asp:DropDownList>   
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Example select</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                        <label for="exampleFormControlSelect2">Nombre Producto</label>
+                                        <br/>
+                                        <asp:TextBox ID="txtNombreProducto" runat="server"></asp:TextBox>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect2">Example multiple select</label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                   <div class="form-group">
+                                        <label for="exampleFormControlSelect2">Caducidad de Producto</label>
+                                       <asp:TextBox ID="txtCaducidad" runat="server"></asp:TextBox>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Example textarea</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  <div class="form-group">
+                                        <label for="exampleFormControlSelect2">Cantidad de Producto</label>
+                                    <asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox>
                                     </div>
-                                    <button type="button" class="btn btn-primary btn-block">Insertar</button>
+                                   <div class="form-group">
+                                        <label for="exampleFormControlSelect1">ID Material</label>
+                                       <asp:DropDownList ID="DropMaterial" runat="server"> </asp:DropDownList>   
+                                    </div>
+                                  <div class="form-group">
+                                        <label for="exampleFormControlSelect1">ID Uso</label>
+                                       <asp:DropDownList ID="DropUso" runat="server"> </asp:DropDownList>   
+                                    </div>
+                                 <div class="form-group">
+                                        <label for="exampleFormControlSelect2">Detalle de Producto</label>
+                                     <asp:TextBox ID="txtDetalle" runat="server"></asp:TextBox>
+                                    </div>
+                                  <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Estado de Producto</label>
+                                        <asp:DropDownList ID="DropEstado" runat="server"></asp:DropDownList >   
+                                    </div>
+                                   <button type="button" class="btn btn-primary btn-block">Insertar</button>
                             </div>
                         </div>
                     </div>

@@ -17,15 +17,13 @@
             <div class="row">
                 <!--Column for signin-->
                 <div class="col-sm-8 text-center signin">
-                    <p class="h4 mb-4 text-center signintext top"><strong>Inicia sesión en SINVEN</strong></p>
-                    <!--Login with Social Media Buttons-->
-                    <p class="text-center signintext">Ingresa tus datos en el formulario</p>
+                    <p class="h4 mb-4 text-center signintext top"><strong>Ingresar Credenciales</strong></p>
                     <!-- Email -->
-                    <asp:TextBox ID="txtEmail" runat="server" type="email" class="form-control mb-4" placeholder="&#xf0e0; Correo electrónico" style="font-family: Arial, FontAwesome"/>
+                    <asp:TextBox ID="txtLogin" runat="server" type="Login" class="form-control mb-4" placeholder="&#xf007; Usuario" style="font-family: Arial, FontAwesome"/>
                     <!-- Password -->
-                    <asp:TextBox ID="txtPass" runat="server" type="password" class="form-control mb-4" placeholder="&#xf023; Password" style="font-family: Arial, FontAwesome"/>
+                    <asp:TextBox ID="txtPass" runat="server" type="password" class="form-control mb-4" placeholder="&#xf023; Contraseña" style="font-family: Arial, FontAwesome"/>
                     <!-- Sign in button -->
-                    <asp:Button ID="btnEntrar" class="btn btn-info LoginBtn" runat="server" Text="INGRESAR" />
+                    <asp:Button ID="btnEntrar" class="btn btn-info LoginBtn" runat="server" Text="Iniciar Sesion" />
                 </div>
                 <!--Column for signin-->
                 <div class="col-sm-4 signup text-center">
