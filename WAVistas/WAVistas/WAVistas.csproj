@@ -67,72 +67,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Compras.aspx" />
-    <Content Include="Estilos.css" />
-    <Content Include="Login.aspx" />
-    <Content Include="Login.css" />
-    <Content Include="Menu.aspx" />
-    <Content Include="Plantilla.html" />
-    <Content Include="Productos.aspx" />
-    <Content Include="Proveedores.aspx" />
-    <Content Include="Usuarios.aspx" />
+    <Content Include="Vistas\Compras.aspx" />
+    <Content Include="Estilos\Estilos.css" />
+    <Content Include="Vistas\Login.aspx" />
+    <Content Include="Estilos\Login.css" />
+    <Content Include="Vistas\Menu.aspx" />
+    <Content Include="Vistas\Plantilla.html" />
+    <Content Include="Vistas\Productos.aspx" />
+    <Content Include="Vistas\Proveedores.aspx" />
+    <Content Include="Vistas\Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compras.aspx.cs">
+    <Compile Include="Vistas\Compras.aspx.cs">
       <DependentUpon>Compras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Compras.aspx.designer.cs">
+    <Compile Include="Vistas\Compras.aspx.designer.cs">
       <DependentUpon>Compras.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Vistas\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Vistas\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Menu.aspx.cs">
+    <Compile Include="Vistas\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menu.aspx.designer.cs">
+    <Compile Include="Vistas\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Plantilla.Master.cs">
+    <Compile Include="Vistas\Plantilla.Master.cs">
       <DependentUpon>Plantilla.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Plantilla.Master.designer.cs">
+    <Compile Include="Vistas\Plantilla.Master.designer.cs">
       <DependentUpon>Plantilla.Master</DependentUpon>
     </Compile>
-    <Compile Include="Productos.aspx.cs">
+    <Compile Include="Vistas\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Productos.aspx.designer.cs">
+    <Compile Include="Vistas\Productos.aspx.designer.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proveedores.aspx.cs">
+    <Compile Include="Vistas\Proveedores.aspx.cs">
       <DependentUpon>Proveedores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Proveedores.aspx.designer.cs">
+    <Compile Include="Vistas\Proveedores.aspx.designer.cs">
       <DependentUpon>Proveedores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios.aspx.cs">
+    <Compile Include="Vistas\Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Usuarios.aspx.designer.cs">
+    <Compile Include="Vistas\Usuarios.aspx.designer.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Plantilla.Master" />
+    <Content Include="Vistas\Plantilla.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,6 +140,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
