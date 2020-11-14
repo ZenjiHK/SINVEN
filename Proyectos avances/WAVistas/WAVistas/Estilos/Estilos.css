@@ -1,0 +1,227 @@
+﻿/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    height: 450px
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    padding: 5px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+}
+
+.card-flip > div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #f1f1f1;
+    margin: 2px;
+    display: flex;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+}
+
+.card-flip:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card-flip:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #424242;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    opacity: 1;
+}
+
+.centro {
+    margin: auto;
+    padding: 20px;
+}
+
+.navbar-global {
+    background-color: indigo;
+}
+
+    .navbar-global .navbar-brand {
+        color: white;
+    }
+
+    .navbar-global .navbar-user > li > a {
+        color: white;
+    }
+
+.navbar-primary {
+    background-color: #333;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    top: 51px;
+    width: 200px;
+    z-index: 8;
+    overflow: hidden;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+    .navbar-primary.collapsed {
+        width: 60px;
+    }
+
+        .navbar-primary.collapsed .glyphicon {
+            font-size: 22px;
+        }
+
+        .navbar-primary.collapsed .nav-label {
+            display: none;
+        }
+
+.btn-expand-collapse {
+    position: absolute;
+    display: block;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0;
+    border-top: solid 1px #666;
+    color: grey;
+    font-size: 20px;
+    text-align: center;
+}
+
+    .btn-expand-collapse:hover,
+    .btn-expand-collapse:focus {
+        background-color: #222;
+        color: white;
+    }
+
+    .btn-expand-collapse:active {
+        background-color: #111;
+    }
+
+.navbar-primary-menu,
+.navbar-primary-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .navbar-primary-menu li a {
+        display: block;
+        padding: 10px 18px;
+        border-bottom: solid 1px #444;
+        color: #ccc;
+    }
+
+        .navbar-primary-menu li a:hover {
+            background-color: #000;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar-primary-menu li a .glyphicon {
+            margin-right: 6px;
+        }
+
+        .navbar-primary-menu li a:hover .glyphicon {
+            color: orchid;
+        }
+
+.main-content {
+    margin-top: 60px;
+    margin-left: 180px;
+    padding: 20px;
+}
+
+.collapsed + .main-content {
+    margin-left: 60px;
+}
+
+.perfil {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.plegable {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .plegable:hover {
+        background-color: #ccc;
+    }
+
+/* Style the collapsible content. Note: hidden by default */
+.contenido {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}

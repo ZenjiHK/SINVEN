@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Plantilla.master.cs" Inherits="WAVistas.Plantilla" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/3080cbac7f.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Estilos/Estilos.css">
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="font-family: 'Noto Sans JP', sans-serif;">
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+            <nav class="navbar-primary">
+                <a id="salir" href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Cerrar Sesión</a>
+                <a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
+                <ul class="navbar-primary-menu">
+                    <li style="text-align:center">
+                        <img src="https://media.istockphoto.com/vectors/isometric-senior-businessman-director-ceo-icon-vector-illustration-vector-id1199092701?k=6&m=1199092701&s=170667a&w=0&h=Kf8wgY7oVXWICSKOsP-_yULb3jaYTqhkpCUVVPZU7MU=" class="centro" alt="Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
+                        <br />
+                        <a><span class="nav-label">[Nombre]</span></a>
+                        <a><span class="nav-label">[Rol]</span></a>
+                    </li>                    
+                    <li style="font-size:17px;background-color:#b71c1c;text-align:center ">
+                        <a><span class="glyphicon glyphicon-log-out"></span><span class="nav-label">Salir</span></a>
+                    </li>
+                    <li style="padding-top:50px">
+                        <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Dashboard</span></a>
+                        <a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">Profile</span></a>
+                        <a href="#"><span class="glyphicon glyphicon-cog"></span><span class="nav-label">Settings</span></a>
+                        <a href="#"><span class="glyphicon glyphicon-film"></span><span class="nav-label">Notification</span></a>
+                        <a href="#"><span class="glyphicon glyphicon-calendar"></span><span class="nav-label">Monitor</span></a>
+                    </li>
+                    
+                </ul>
+            </nav>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="Menu.aspx">Restaurante "El Nuevo Bosque" - SINVEN</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="Menu.aspx"><span class="glyphicon glyphicon-home" style="padding-right: 5px"></span>&nbsp;Home</a></li>
+                            <li><a href="Proveedores.aspx"><span class="fas fa-truck"></span>&nbsp;Proveedores</a></li>
+                            <li><a href="Productos.aspx"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Productos</a></li>
+                            <li><a href="Compras.aspx"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Compra de productos</a></li>
+                            <li><a href="Usuarios.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;Usuarios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer class="container-fluid text-center">
+                <p>Análisis y Diseño de Sistemas de Información - 2020</p>
+            </footer>
+        </div>
+    </form>
+    <script>
+        $('.btn-expand-collapse').click(function (e) {
+            $('.navbar-primary').toggleClass('collapsed');
+        });
+        var coll = document.getElementsByClassName("plegable");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

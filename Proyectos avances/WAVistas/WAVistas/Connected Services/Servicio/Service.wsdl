@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58496/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58496/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58496/Service.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_pa_stockProductosMovimientos_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_stockProductosMovimientos" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_stockProductosMovimientos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_stockProductosMovimientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_sp_detalle_productos_InputMessage">
+    <wsdl:part name="parameters" element="tns:sp_detalle_productos" />
+  </wsdl:message>
+  <wsdl:message name="IService_sp_detalle_productos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sp_detalle_productosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProductosPorValor_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProductosPorValor" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProductosPorValor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProductosPorValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_VerProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_VerProductos" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_VerProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_VerProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_VerProductosByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_VerProductosByID" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_VerProductosByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_VerProductosByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_InsertarActualizarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_InsertarActualizarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_InsertarActualizarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_InsertarActualizarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProductoEliminarByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProductoEliminarByID" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProductoEliminarByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProductoEliminarByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_MovimientosConsultar_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MovimientosConsultar" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_MovimientosConsultar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MovimientosConsultarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_MovimientosBuscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MovimientosBuscar" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_MovimientosBuscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MovimientosBuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorInsertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorInsertar" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorInsertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorInsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorConsulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorConsulta" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorConsulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorPorValor_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorPorValor" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorPorValor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorPorValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorEliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorEliminar" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_ProveedorEliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_ProveedorEliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_AgregarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_AgregarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_AgregarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_AgregarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ModificarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ModificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ModificarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ModificarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ValidarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ValidarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ValidarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ValidarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ListCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ListCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ListCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ListCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ListMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ListMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ListMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ListMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_TopDiez_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_TopDiez" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_TopDiez_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_TopDiezResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="pa_stockProductosMovimientos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_stockProductosMovimientos" message="tns:IService_pa_stockProductosMovimientos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_stockProductosMovimientosResponse" message="tns:IService_pa_stockProductosMovimientos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sp_detalle_productos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/sp_detalle_productos" message="tns:IService_sp_detalle_productos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/sp_detalle_productosResponse" message="tns:IService_sp_detalle_productos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProductosPorValor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProductosPorValor" message="tns:IService_pa_ProductosPorValor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_ProductosPorValorResponse" message="tns:IService_pa_ProductosPorValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_VerProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_VerProductos" message="tns:IService_pa_VerProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_VerProductosResponse" message="tns:IService_pa_VerProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_VerProductosByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_VerProductosByID" message="tns:IService_pa_VerProductosByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_VerProductosByIDResponse" message="tns:IService_pa_VerProductosByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_InsertarActualizarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_InsertarActualizarProducto" message="tns:IService_pa_InsertarActualizarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_InsertarActualizarProductoResponse" message="tns:IService_pa_InsertarActualizarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProductoEliminarByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProductoEliminarByID" message="tns:IService_pa_ProductoEliminarByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_ProductoEliminarByIDResponse" message="tns:IService_pa_ProductoEliminarByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_MovimientosConsultar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_MovimientosConsultar" message="tns:IService_pa_MovimientosConsultar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_MovimientosConsultarResponse" message="tns:IService_pa_MovimientosConsultar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_MovimientosBuscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_MovimientosBuscar" message="tns:IService_pa_MovimientosBuscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_MovimientosBuscarResponse" message="tns:IService_pa_MovimientosBuscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorInsertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProveedorInsertar" message="tns:IService_pa_ProveedorInsertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_ProveedorInsertarResponse" message="tns:IService_pa_ProveedorInsertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorConsulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProveedorConsulta" message="tns:IService_pa_ProveedorConsulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_ProveedorConsultaResponse" message="tns:IService_pa_ProveedorConsulta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorPorValor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProveedorPorValor" message="tns:IService_pa_ProveedorPorValor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_ProveedorPorValorResponse" message="tns:IService_pa_ProveedorPorValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorEliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProveedorEliminar" message="tns:IService_pa_ProveedorEliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_ProveedorEliminarResponse" message="tns:IService_pa_ProveedorEliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_AgregarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_AgregarUsuario" message="tns:IService_SP_AgregarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_AgregarUsuarioResponse" message="tns:IService_SP_AgregarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_ModificarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ModificarUsuario" message="tns:IService_SP_ModificarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ModificarUsuarioResponse" message="tns:IService_SP_ModificarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_ValidarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ValidarUsuario" message="tns:IService_SP_ValidarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ValidarUsuarioResponse" message="tns:IService_SP_ValidarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_ListCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ListCategoria" message="tns:IService_SP_ListCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ListCategoriaResponse" message="tns:IService_SP_ListCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_ListMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ListMaterial" message="tns:IService_SP_ListMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ListMaterialResponse" message="tns:IService_SP_ListMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_TopDiez">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_TopDiez" message="tns:IService_pa_TopDiez_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_TopDiezResponse" message="tns:IService_pa_TopDiez_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="pa_stockProductosMovimientos">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_stockProductosMovimientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sp_detalle_productos">
+      <soap:operation soapAction="http://tempuri.org/IService/sp_detalle_productos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProductosPorValor">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_ProductosPorValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_VerProductos">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_VerProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_VerProductosByID">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_VerProductosByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_InsertarActualizarProducto">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_InsertarActualizarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProductoEliminarByID">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_ProductoEliminarByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_MovimientosConsultar">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_MovimientosConsultar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_MovimientosBuscar">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_MovimientosBuscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorInsertar">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_ProveedorInsertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorConsulta">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_ProveedorConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorPorValor">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_ProveedorPorValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_ProveedorEliminar">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_ProveedorEliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_AgregarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_AgregarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_ModificarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_ModificarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_ValidarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_ListCategoria">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_ListCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_ListMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_ListMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_TopDiez">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_TopDiez" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:58496/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
