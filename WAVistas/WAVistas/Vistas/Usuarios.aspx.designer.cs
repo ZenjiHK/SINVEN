@@ -15,15 +15,6 @@ namespace WAVistas
     {
 
         /// <summary>
-        /// Control DropIdUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropIdUsuario;
-
-        /// <summary>
         /// Control txtNombre.
         /// </summary>
         /// <remarks>
@@ -51,13 +42,13 @@ namespace WAVistas
         protected global::System.Web.UI.WebControls.TextBox txtpassword;
 
         /// <summary>
-        /// Control DropEstado.
+        /// Control CheckActivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropEstado;
+        protected global::System.Web.UI.WebControls.CheckBox CheckActivo;
 
         /// <summary>
         /// Control DropRol.
@@ -67,5 +58,14 @@ namespace WAVistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropRol;
+
+        /// <summary>
+        /// Control Button1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

@@ -285,6 +285,42 @@ public class Service : IService
 			return null;
 		}
 	}
+
+
+	public DataSet SP_dsIdUsuario()
+	{
+		try
+		{
+			da = new SqlDataAdapter("SP_dsIdUsuario", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.Fill(ds, "SP_dsIdUsuario");
+			return ds;
+		}
+		catch (Exception)
+		{
+			//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+
+	}
+
+	public DataSet SP_RolUsuario()
+	{
+		try
+		{
+			da = new SqlDataAdapter("SP_RolUsuario", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.Fill(ds, "SP_RolUsuario");
+			return ds;
+		}
+		catch (Exception)
+		{
+			//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+
+	}
+
 	public DataSet SP_ListCategoria()
 	{
 		try

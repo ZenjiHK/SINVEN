@@ -1,10 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Plantilla.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="WAVistas.Usuarios" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="main-content">
-        <div class=" main-content">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class=" main-content">
         <div class="page-header text-center">
             <h1 style="font-weight: bold; padding-top: 30px">USUARIOS</h1>
         </div>
@@ -59,13 +58,10 @@
                             <p>Instrucciones</p>
                         </div>
                         <hr />
-                      <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Insertar un nuevo registro</span></button>
+                      <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Nuevo Usuario</span></button>
                         <div class="contenido">
                                     <div class="form-group">
                                         <br />
-                                        <label for="exampleFormControlInput1">ID Usuario</label>
-                                         <asp:DropDownList ID="DropIdUsuario" runat="server"> </asp:DropDownList>
-                                    </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Nombre Usuario</label>
                                           <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
@@ -80,30 +76,23 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Estado</label>
-                                       <asp:DropDownList ID="DropEstado" runat="server"></asp:DropDownList>
-                                    </div>
-                                     <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Fecha Registro</label>
-                                    </div>
+                                        <asp:CheckBox ID="CheckActivo" runat="server" Text="Activo/Inactivo" />
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Tipo de Rol</label>
                                         <asp:DropDownList ID="DropRol" runat="server"></asp:DropDownList>
                                     </div>
-                                    <button type="button" class="btn btn-primary btn-block">Insertar</button>
+
+                                        <asp:Button ID="Button1" class="btn btn-primary btn-block" runat="server" Text="Agregar" OnClick="BtnInsertar_Click" ViewStateMode="Disabled" />
+
                             <br />
+                         </div>
                         </div>
-                        
-                        <div class="collapse multi-collapse" id="multiCollapseExample1">
-                            <div class="card card-body">
-                                
-                            </div>
-                        </div>
+                      </div>
+                     </div>
                     </div>
+                   </div>
                 </div>
             </div>
             <div class="col-md-1"></div>
-        </div>
         <br />
-    </div>
-    </div>
 </asp:Content>

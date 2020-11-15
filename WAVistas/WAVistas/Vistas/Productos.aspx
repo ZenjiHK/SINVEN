@@ -94,7 +94,7 @@
                                         <label for="exampleFormControlSelect1">Estado de Producto</label>
                                         <asp:DropDownList ID="DropEstado" runat="server"></asp:DropDownList >   
                                     </div>
-                                   <button type="button" class="btn btn-primary btn-block">Insertar</button>
+                                   <asp:Button ID="btnInsertar" class="btn btn-primary btn-block" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
                             </div>
                         </div>
                     </div>

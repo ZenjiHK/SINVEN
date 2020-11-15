@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Plantilla.master" AutoEventWireup="true" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Plantilla.Master" AutoEventWireup="true" CodeBehind="Proveedores.aspx.cs" Inherits="WAVistas.Vistas.Provs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class=" main-content">
         <div class="page-header text-center">
             <h1 style="font-weight: bold; padding-top: 30px">PROVEEDORES</h1>
@@ -61,12 +60,6 @@
                       <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Nuevo Proveedor</span></button>
                         <div class="contenido">
                                     <div class="form-group">
-                                        <br />
-                                        <label for="exampleFormControlInput1">ID Proveedor</label>
-                                         <asp:DropDownList ID="DropIdProveedor" runat="server">
-                                         </asp:DropDownList>
-                                    </div>
-                                    <div class="form-group">
                                         <label for="exampleFormControlInput1">Nombre Proveedor</label>
                                         <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
                                     </div>
@@ -91,13 +84,11 @@
                                              <asp:TextBox ID="txtNit" runat="server"></asp:TextBox>
                                     </div>
                                              <div class="form-group">
-                                             <label for="exampleFormControlInput1">Estado Proveedor</label>
-                                             <asp:DropDownList ID="DropEstado" runat="server"> </asp:DropDownList>
+                                               <label for="exampleFormControlTextarea1">Estado</label>
+                                           <asp:CheckBox ID="CheckActivo" runat="server" Text="Activo/Inactivo" />
                                     </div>
-                                             <div class="form-group">
-                                             <label for="exampleFormControlInput1">Registro Proveedor</label>
-                                    </div>
-                                      <button type="button" class="btn btn-primary btn-block">Insertar</button>
+
+                                        <asp:Button ID="btnInsertar" class="btn btn-primary btn-block" runat="server" Text="Agregar" ViewStateMode="Disabled" OnClick="btnInsertar_Click" />
                             <br />
                         </div>
                         

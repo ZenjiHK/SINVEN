@@ -13,5 +13,10 @@ namespace WAVistas
         {
 
         }
+
+        protected void btnInsertar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

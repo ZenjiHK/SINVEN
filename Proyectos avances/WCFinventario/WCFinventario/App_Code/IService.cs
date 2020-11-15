@@ -40,11 +40,18 @@ public interface IService
 	[OperationContract]
 	DataSet pa_ProveedorEliminar(int @pa_id);
 	[OperationContract]
-	DataSet SP_AgregarUsuario(string @Nombre, string @Login, string @Password, bool @Estado,int @cod_rol, string @Patron);
+	DataSet SP_AgregarUsuario(string @Nombre, string @Login, string @Password, bool @Estado, int @cod_rol, string @Patron);
 	[OperationContract]
-	DataSet SP_ModificarUsuario(int @Id_Usuario,string @Nombre,string @Login,string @Password,bool @Estado,int @cod_rol,string @Patron);
+	DataSet SP_ModificarUsuario(int @Id_Usuario, string @Nombre, string @Login, string @Password, bool @Estado, int @cod_rol, string @Patron);
 	[OperationContract]
 	DataSet SP_ValidarUsuario(string @Login, string @Password, string @Patron);
+
+	[OperationContract]
+	DataSet SP_dsIdUsuario();
+
+	[OperationContract]
+	DataSet SP_RolUsuario();
+
 	[OperationContract]
 	DataSet SP_ListCategoria();
 	[OperationContract]

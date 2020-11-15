@@ -114,7 +114,7 @@
                                         <label for="exampleFormControlTextarea1">Example textarea</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
-                                    <button type="button" class="btn btn-primary btn-block">Insertar</button>
+                                    <asp:Button ID="btnInsertar" class="btn btn-primary btn-block" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
                             <br />
                         </div>
                     </div>

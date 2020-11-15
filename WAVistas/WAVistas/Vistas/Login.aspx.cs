@@ -13,5 +13,10 @@ namespace WAVistas
         {
 
         }
+
+        protected void BtnEntrar_Click(object sender, EventArgs e)
+        {
+           Response.Redirect("Menu.aspx");
+        }
     }
 }

@@ -5,11 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WAVistas
+namespace WAVistas.Vistas
 {
-    public partial class Proveedores : System.Web.UI.Page
+    public partial class Provs : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnInsertar_Click(object sender, EventArgs e)
         {
 
         }

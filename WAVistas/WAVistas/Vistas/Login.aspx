@@ -23,7 +23,8 @@
                     <!-- Password -->
                     <asp:TextBox ID="txtPass" runat="server" type="password" class="form-control mb-4" placeholder="&#xf023; Contraseña" style="font-family: Arial, FontAwesome"/>
                     <!-- Sign in button -->
-                    <asp:Button ID="btnEntrar" class="btn btn-info LoginBtn" runat="server" Text="Iniciar Sesion" />
+
+                    <asp:Button ID="BtnEntrar" class="btn btn-info LoginBtn" runat="server" Text="Iniciar Sesion" OnClick="BtnEntrar_Click" />
                 </div>
                 <!--Column for signin-->
                 <div class="col-sm-4 signup text-center">
