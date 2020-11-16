@@ -6,57 +6,44 @@
     <div class=" main-content">
         <div class="page-header text-center">
             <h1 style="font-weight: bold; padding-top: 30px">USUARIOS</h1>
+
+            <asp:GridView ID="GridUsuarios" runat="server"></asp:GridView>
         </div>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-6">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Acciones</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td><button type="button" class="btn btn-primary">Deshabilitar</button></td>
-                            <td><button type="button" class="btn btn-primary">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td><button type="button" class="btn btn-primary">Deshabilitar</button></td>
-                            <td><button type="button" class="btn btn-primary">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td><button type="button" class="btn btn-primary">Deshabilitar</button></td>
-                            <td><button type="button" class="btn btn-primary">Actualizar</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
             <div class="col-md-1"></div>
             <div class="col-md-3" style="border: solid; border-color: darkgrey; border-radius: 5%; padding: 25px">
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Instrucciones de uso</span></button>
+                 <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"> </span><span class="nav-label">&nbsp;&nbsp;Actualizar Usuario</span></button>
                         <div class="contenido">
-                            <p>Instrucciones</p>
-                        </div>
+                            <br>
+                              <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">ID Usuario</label>
+                                        <asp:DropDownList ID="DropUsuarioID" runat="server" OnSelectedIndexChanged="DropUsuario_SelectedIndexChanged" OnTextChanged="DropUsuarioID_TextChanged" AutoPostBack="True"></asp:DropDownList>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Nombre Usuario</label>
+                                          <asp:TextBox ID="txtNombreActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                      <div class="form-group">
+                                        <label for="exampleFormControlSelect2">Nombre Login</label>
+                                         <asp:TextBox ID="txtLoginActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Contraseña</label>
+                                        <asp:TextBox ID="txtContraseñaActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Estado</label>
+                                        <asp:CheckBox ID="CheckEstado" runat="server" Text="Activo/Inactivo" />
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Tipo de Rol</label>
+                                        <asp:DropDownList ID="DropRolActualizar" runat="server"></asp:DropDownList>
+                                    </div>
+
+                                        <asp:Button ID="btnActu" class="btn btn-primary btn-block" runat="server" Text="Actualizar" OnClick="btnActu_Click" ViewStateMode="Disabled" />
+                                        <asp:Label ID="lblMensajes" runat="server" Text=""></asp:Label>
+                                    </div>   
+                            </div> 
                         <hr />
                       <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Nuevo Usuario</span></button>
                         <div class="contenido">
@@ -82,7 +69,7 @@
                                         <asp:DropDownList ID="DropRol" runat="server"></asp:DropDownList>
                                     </div>
 
-                                        <asp:Button ID="Button1" class="btn btn-primary btn-block" runat="server" Text="Agregar" OnClick="BtnInsertar_Click" ViewStateMode="Disabled" />
+                                        <asp:Button ID="BtnAgregar" class="btn btn-primary btn-block" runat="server" Text="Agregar" OnClick="BtnInsertar_Click" ViewStateMode="Disabled" />
 
                             <br />
                          </div>
@@ -92,7 +79,7 @@
                     </div>
                    </div>
                 </div>
-            </div>
+            
             <div class="col-md-1"></div>
         <br />
 </asp:Content>

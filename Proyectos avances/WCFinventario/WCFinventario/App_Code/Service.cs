@@ -164,17 +164,19 @@ public class Service : IService
 			return null;
 		}
 	}
-	public DataSet pa_ProveedorInsertar(int @pa_id, string @pa_nombre, string @pa_telefono, string @pa_correo)
+	public DataSet SP_InsertarProveedor(string @nombre, string @contacto, string @direccion, string @telefono, string @correo, string @nit)
 	{
 		try
 		{
-			da = new SqlDataAdapter("pa_ProveedorInsertar", Conexion);
+			da = new SqlDataAdapter("SP_InsertarProveedor", Conexion);
 			da.SelectCommand.CommandType = CommandType.StoredProcedure;
-			da.SelectCommand.Parameters.AddWithValue("@pa_id", @pa_id);
-			da.SelectCommand.Parameters.AddWithValue("@pa_nombre", @pa_nombre);
-			da.SelectCommand.Parameters.AddWithValue("@pa_telefono", @pa_telefono);
-			da.SelectCommand.Parameters.AddWithValue("@pa_correo", @pa_correo);
-			da.Fill(ds, "pa_ProveedorInsertar");
+			da.SelectCommand.Parameters.AddWithValue("@nombre", @nombre);
+			da.SelectCommand.Parameters.AddWithValue("@contacto", @contacto);
+			da.SelectCommand.Parameters.AddWithValue("@direccion", @direccion);
+			da.SelectCommand.Parameters.AddWithValue("@telefono", @telefono);
+			da.SelectCommand.Parameters.AddWithValue("@correo", @correo);
+			da.SelectCommand.Parameters.AddWithValue("@nit", @nit);
+			da.Fill(ds, "SP_InsertarProveedor");
 			return ds;
 		}
 		catch (Exception)
@@ -182,6 +184,31 @@ public class Service : IService
 			return null;
 		}
 	}
+
+
+	public DataSet SP_ModificarProveedor(int @id_proveedor, string @nombre, string @contacto, string @direccion, string @telefono, string @correo, string @nit, bool @estado)
+	{
+		try
+		{
+			da = new SqlDataAdapter("SP_ModificarProveedor", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.SelectCommand.Parameters.AddWithValue("@id_proveedor", @id_proveedor);
+			da.SelectCommand.Parameters.AddWithValue("@nombre", @nombre);
+			da.SelectCommand.Parameters.AddWithValue("@contacto", @contacto);
+			da.SelectCommand.Parameters.AddWithValue("@direccion", @direccion);
+			da.SelectCommand.Parameters.AddWithValue("@telefono", @telefono);
+			da.SelectCommand.Parameters.AddWithValue("@correo", @correo);
+			da.SelectCommand.Parameters.AddWithValue("@nit", @nit);
+			da.SelectCommand.Parameters.AddWithValue("@estado", @estado);
+			da.Fill(ds, "SP_ModificarProveedor");
+			return ds;
+		}
+		catch (Exception)
+		{//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+	}
+
 	public DataSet pa_ProveedorConsulta()
 	{
 		try
@@ -232,12 +259,12 @@ public class Service : IService
 		{
 			da = new SqlDataAdapter("SP_AgregarUsuario", Conexion);
 			da.SelectCommand.CommandType = CommandType.StoredProcedure;
-			da.SelectCommand.Parameters.AddWithValue("@Nombre", @Nombre);
-			da.SelectCommand.Parameters.AddWithValue("@Login", @Login);
-			da.SelectCommand.Parameters.AddWithValue("@Password", @Password);
-			da.SelectCommand.Parameters.AddWithValue("@Estado", @Estado);
-			da.SelectCommand.Parameters.AddWithValue("@cod_rol", @cod_rol);
-			da.SelectCommand.Parameters.AddWithValue("@Patron", @Patron);
+			da.SelectCommand.Parameters.AddWithValue("@Nombre",@Nombre);
+			da.SelectCommand.Parameters.AddWithValue("@Login",@Login);
+			da.SelectCommand.Parameters.AddWithValue("@Password",@Password);
+			da.SelectCommand.Parameters.AddWithValue("@Estado",@Estado);
+			da.SelectCommand.Parameters.AddWithValue("@cod_rol",@cod_rol);
+			da.SelectCommand.Parameters.AddWithValue("@Patron",@Patron);
 			da.Fill(ds, "SP_AgregarUsuario");
 			return ds;
 		}
@@ -287,13 +314,13 @@ public class Service : IService
 	}
 
 
-	public DataSet SP_dsIdUsuario()
+	public DataSet SP_GridUsuarios()
 	{
 		try
 		{
-			da = new SqlDataAdapter("SP_dsIdUsuario", Conexion);
+			da = new SqlDataAdapter("SP_GridUsuarios", Conexion);
 			da.SelectCommand.CommandType = CommandType.StoredProcedure;
-			da.Fill(ds, "SP_dsIdUsuario");
+			da.Fill(ds, "SP_GridUsuarios");
 			return ds;
 		}
 		catch (Exception)
@@ -303,6 +330,89 @@ public class Service : IService
 		}
 
 	}
+
+	public DataSet SP_DropProveedorID(int @id_proveedor)
+	{
+		try
+		{
+			da = new SqlDataAdapter("SP_DropProveedorID", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.SelectCommand.Parameters.AddWithValue("@id_proveedor", @id_proveedor);
+			da.Fill(ds, "SP_DropProveedorID");
+			return ds;
+		}
+		catch (Exception)
+		{
+			//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+
+	}
+	public DataSet SP_DropProductosID()
+	{
+		try
+		{
+			da = new SqlDataAdapter("SP_DropProductosID", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.Fill(ds, "SP_DropProductosID");
+			return ds;
+		}
+		catch (Exception)
+		{
+			//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+
+	}
+
+	public DataSet Sp_InsertaProducto(string @producto, DateTime @fecha_caducidad, int @cantidad, int @id_material, int @id_uso, string @detalle)
+	{
+		try
+		{
+			da = new SqlDataAdapter("Sp_InsertaProducto", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.SelectCommand.Parameters.AddWithValue("@producto", @producto);
+			da.SelectCommand.Parameters.AddWithValue("@fecha_caducidad", @fecha_caducidad);
+			da.SelectCommand.Parameters.AddWithValue("@cantidad", @cantidad);
+			da.SelectCommand.Parameters.AddWithValue("@id_material", @id_material);
+			da.SelectCommand.Parameters.AddWithValue("@id_uso", @id_uso);
+			da.SelectCommand.Parameters.AddWithValue("@detalle", @detalle);
+			da.Fill(ds, "Sp_InsertaProducto");
+			return ds;
+		}
+		catch (Exception)
+		{
+			//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+
+	}
+
+	public DataSet Sp_ActualizarProducto(int @id_producto, string @producto, DateTime @fecha_caducidad, int @cantidad, int @id_material, int @id_uso, string @detalle, bool @estado)
+	{
+		try
+		{
+			da = new SqlDataAdapter("Sp_ActualizarProducto", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.SelectCommand.Parameters.AddWithValue("@id_producto", @id_producto);
+			da.SelectCommand.Parameters.AddWithValue("@producto", @producto);
+			da.SelectCommand.Parameters.AddWithValue("@fecha_caducidad", @fecha_caducidad);
+			da.SelectCommand.Parameters.AddWithValue("@cantidad", @cantidad);
+			da.SelectCommand.Parameters.AddWithValue("@id_material", @id_material);
+			da.SelectCommand.Parameters.AddWithValue("@id_uso", @id_uso);
+			da.SelectCommand.Parameters.AddWithValue("@detalle", @detalle);
+			da.SelectCommand.Parameters.AddWithValue("@estado", @estado);
+			da.Fill(ds, "Sp_ActualizarProducto");
+			return ds;
+		}
+		catch (Exception)
+		{
+			//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+
+	}
+
 
 	public DataSet SP_RolUsuario()
 	{
@@ -320,6 +430,26 @@ public class Service : IService
 		}
 
 	}
+
+
+	public DataSet SP_UsuarioID(int @Id_Usuario)
+	{
+		try
+		{
+			da = new SqlDataAdapter("SP_UsuarioID", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.SelectCommand.Parameters.AddWithValue("@Id_Usuario", @Id_Usuario);
+			da.Fill(ds, "SP_UsuarioID");
+			return ds;
+		}
+		catch (Exception)
+		{//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+	}
+
+
+	
 
 	public DataSet SP_ListCategoria()
 	{

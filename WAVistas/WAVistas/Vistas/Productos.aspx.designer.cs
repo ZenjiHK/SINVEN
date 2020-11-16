@@ -15,13 +15,13 @@ namespace WAVistas
     {
 
         /// <summary>
-        /// Control DropIdProveedor.
+        /// Control GridProductos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropIdProveedor;
+        protected global::System.Web.UI.WebControls.GridView GridProductos;
 
         /// <summary>
         /// Control txtNombreProducto.
@@ -51,22 +51,22 @@ namespace WAVistas
         protected global::System.Web.UI.WebControls.TextBox txtCantidad;
 
         /// <summary>
-        /// Control DropMaterial.
+        /// Control DropMaterialAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropMaterial;
+        protected global::System.Web.UI.WebControls.DropDownList DropMaterialAgregar;
 
         /// <summary>
-        /// Control DropUso.
+        /// Control DropUsoAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropUso;
+        protected global::System.Web.UI.WebControls.DropDownList DropUsoAgregar;
 
         /// <summary>
         /// Control txtDetalle.
@@ -78,13 +78,13 @@ namespace WAVistas
         protected global::System.Web.UI.WebControls.TextBox txtDetalle;
 
         /// <summary>
-        /// Control DropEstado.
+        /// Control CheckEstadoAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropEstado;
+        protected global::System.Web.UI.WebControls.CheckBox CheckEstadoAgregar;
 
         /// <summary>
         /// Control btnInsertar.
@@ -94,5 +94,86 @@ namespace WAVistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInsertar;
+
+        /// <summary>
+        /// Control DropProductosID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropProductosID;
+
+        /// <summary>
+        /// Control txtNombreActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNombreActualizar;
+
+        /// <summary>
+        /// Control txtCaducidadActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCaducidadActualizar;
+
+        /// <summary>
+        /// Control txtCantidadActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCantidadActualizar;
+
+        /// <summary>
+        /// Control DropMaterialActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropMaterialActualizar;
+
+        /// <summary>
+        /// Control DropUsoActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropUsoActualizar;
+
+        /// <summary>
+        /// Control txtDetalleActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDetalleActualizar;
+
+        /// <summary>
+        /// Control CheckEstadoActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CheckEstadoActualizar;
+
+        /// <summary>
+        /// Control btnActualizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizar;
     }
 }

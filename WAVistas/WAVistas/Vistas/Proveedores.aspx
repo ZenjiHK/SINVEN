@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Plantilla.Master" AutoEventWireup="true" CodeBehind="Proveedores.aspx.cs" Inherits="WAVistas.Vistas.Provs" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,57 +7,52 @@
         <div class="page-header text-center">
             <h1 style="font-weight: bold; padding-top: 30px">PROVEEDORES</h1>
         </div>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-6">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Acciones</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td><button type="button" class="btn btn-primary">Deshabilitar</button></td>
-                            <td><button type="button" class="btn btn-primary">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td><button type="button" class="btn btn-primary">Deshabilitar</button></td>
-                            <td><button type="button" class="btn btn-primary">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td><button type="button" class="btn btn-primary">Deshabilitar</button></td>
-                            <td><button type="button" class="btn btn-primary">Actualizar</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-1"></div>
+          <asp:GridView ID="GridProveedores" runat="server" Visible="True"></asp:GridView>    <div class="col-md-1"></div>
             <div class="col-md-3" style="border: solid; border-color: darkgrey; border-radius: 5%; padding: 25px">
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Instrucciones de uso</span></button>
-                        <div class="contenido">
-                            <p>Instrucciones</p>
+                        <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Actualizar Proveedor</span></button>
+                       <div class="contenido">
+                           <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">ID Usuario</label>
+                                        <asp:DropDownList ID="DropProveedoresID" runat="server" OnSelectedIndexChanged="DropProveedoresID_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Nombre Proveedor</label>
+                                        <asp:TextBox ID="txtNombreActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Contacto Proveedor</label>
+                                          <asp:TextBox ID="txtContactoActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                     <div class="form-group">
+                                         <label for="exampleFormControlInput1">Direccion Proveedor</label>
+                                           <asp:TextBox ID="txtDireccionActualizar" runat="server"></asp:TextBox>
+                                    </div> 
+                                         <div class="form-group">
+                                         <label for="exampleFormControlInput1">Telefono Proveedor</label>
+                                           <asp:TextBox ID="txtTelefonoActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                     <div class="form-group">
+                                         <label for="exampleFormControlInput1">Email Proveedor</label>
+                                           <asp:TextBox ID="txtemailActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                          <div class="form-group">
+                                             <label for="exampleFormControlInput1">Nit Proveedor</label>
+                                             <asp:TextBox ID="txtnitActualizar" runat="server"></asp:TextBox>
+                                    </div>
+                                             <div class="form-group">
+                                               <label for="exampleFormControlTextarea1">Estado</label>
+                                           <asp:CheckBox ID="CheckEstadoActualizar" runat="server" Text="Activo/Inactivo" />
+                                    </div>
+
+                                        <asp:Button ID="btnActualizar" class="btn btn-primary btn-block" runat="server" Text="Actualizar" ViewStateMode="Disabled" OnClick="btnActualizar_Click" />
+                           <asp:Label ID="lblMensajes" runat="server" Text=""></asp:Label>
+                            <br />
                         </div>
-                        <hr />
+                        </div>
+                </div>
+                    <hr />
                       <button type="button" class="plegable"><span class="glyphicon glyphicon-plus"></span><span class="nav-label">&nbsp;&nbsp;Nuevo Proveedor</span></button>
                         <div class="contenido">
                                     <div class="form-group">
@@ -69,7 +65,7 @@
                                     </div>
                                          <div class="form-group">
                                          <label for="exampleFormControlInput1">Direccion Proveedor</label>
-                                           <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
+                                           <asp:TextBox ID="txtDireccionAgregar" runat="server"></asp:TextBox>
                                     </div> 
                                          <div class="form-group">
                                          <label for="exampleFormControlInput1">Telefono Proveedor</label>
@@ -77,7 +73,7 @@
                                     </div>
                                          <div class="form-group">
                                          <label for="exampleFormControlInput1">Email Proveedor</label>
-                                           <input type="email" class="form-control" id="txtemail" placeholder="name@example.com">
+                                           <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
                                     </div>
                                           <div class="form-group">
                                              <label for="exampleFormControlInput1">Nit Proveedor</label>
@@ -99,9 +95,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="col-md-1"></div>
-        </div>
         <br />
-    </div>
 </asp:Content>

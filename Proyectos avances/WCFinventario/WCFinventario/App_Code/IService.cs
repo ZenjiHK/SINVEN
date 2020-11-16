@@ -32,7 +32,10 @@ public interface IService
 	[OperationContract]
 	DataSet pa_MovimientosBuscar(string @pa_buscar);
 	[OperationContract]
-	DataSet pa_ProveedorInsertar(int @pa_id, string @pa_nombre, string @pa_telefono, string @pa_correo);
+	DataSet SP_InsertarProveedor(string @nombre, string @contacto, string @direccion, string  @telefono, string @correo, string @nit);
+	[OperationContract]
+	DataSet SP_ModificarProveedor(int @id_proveedor, string @nombre, string @contacto, string @direccion, string @telefono, string @correo, string @nit, bool @estado);
+
 	[OperationContract]
 	DataSet pa_ProveedorConsulta();
 	[OperationContract]
@@ -47,7 +50,22 @@ public interface IService
 	DataSet SP_ValidarUsuario(string @Login, string @Password, string @Patron);
 
 	[OperationContract]
-	DataSet SP_dsIdUsuario();
+	DataSet SP_GridUsuarios();
+
+	[OperationContract]
+	DataSet SP_DropProveedorID(int @id_proveedor);
+
+	[OperationContract]
+	DataSet SP_DropProductosID();
+
+	[OperationContract]
+	DataSet Sp_InsertaProducto(string @producto, DateTime @fecha_caducidad, int @cantidad, int @id_material, int @id_uso, string @detalle);
+
+	[OperationContract]
+	DataSet Sp_ActualizarProducto(int @id_producto,string @producto, DateTime @fecha_caducidad, int @cantidad, int @id_material, int @id_uso, string @detalle, bool @estado);
+
+	[OperationContract]
+	DataSet SP_UsuarioID( int @Id_Usuario);
 
 	[OperationContract]
 	DataSet SP_RolUsuario();

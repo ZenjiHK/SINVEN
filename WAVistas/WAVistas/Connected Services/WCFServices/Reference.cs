@@ -69,11 +69,17 @@ namespace WAVistas.WCFServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_MovimientosBuscar", ReplyAction="http://tempuri.org/IService/pa_MovimientosBuscarResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> pa_MovimientosBuscarAsync(string pa_buscar);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_ProveedorInsertar", ReplyAction="http://tempuri.org/IService/pa_ProveedorInsertarResponse")]
-        System.Data.DataSet pa_ProveedorInsertar(int pa_id, string pa_nombre, string pa_telefono, string pa_correo);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_InsertarProveedor", ReplyAction="http://tempuri.org/IService/SP_InsertarProveedorResponse")]
+        System.Data.DataSet SP_InsertarProveedor(string nombre, string contacto, string direccion, string telefono, string correo, string nit);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_ProveedorInsertar", ReplyAction="http://tempuri.org/IService/pa_ProveedorInsertarResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> pa_ProveedorInsertarAsync(int pa_id, string pa_nombre, string pa_telefono, string pa_correo);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_InsertarProveedor", ReplyAction="http://tempuri.org/IService/SP_InsertarProveedorResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_InsertarProveedorAsync(string nombre, string contacto, string direccion, string telefono, string correo, string nit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_ModificarProveedor", ReplyAction="http://tempuri.org/IService/SP_ModificarProveedorResponse")]
+        System.Data.DataSet SP_ModificarProveedor(int id_proveedor, string nombre, string contacto, string direccion, string telefono, string correo, string nit, bool estado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_ModificarProveedor", ReplyAction="http://tempuri.org/IService/SP_ModificarProveedorResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_ModificarProveedorAsync(int id_proveedor, string nombre, string contacto, string direccion, string telefono, string correo, string nit, bool estado);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_ProveedorConsulta", ReplyAction="http://tempuri.org/IService/pa_ProveedorConsultaResponse")]
         System.Data.DataSet pa_ProveedorConsulta();
@@ -111,11 +117,41 @@ namespace WAVistas.WCFServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_ValidarUsuario", ReplyAction="http://tempuri.org/IService/SP_ValidarUsuarioResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> SP_ValidarUsuarioAsync(string Login, string Password, string Patron);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_dsIdUsuario", ReplyAction="http://tempuri.org/IService/SP_dsIdUsuarioResponse")]
-        System.Data.DataSet SP_dsIdUsuario();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_GridUsuarios", ReplyAction="http://tempuri.org/IService/SP_GridUsuariosResponse")]
+        System.Data.DataSet SP_GridUsuarios();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_dsIdUsuario", ReplyAction="http://tempuri.org/IService/SP_dsIdUsuarioResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> SP_dsIdUsuarioAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_GridUsuarios", ReplyAction="http://tempuri.org/IService/SP_GridUsuariosResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_GridUsuariosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_DropProveedorID", ReplyAction="http://tempuri.org/IService/SP_DropProveedorIDResponse")]
+        System.Data.DataSet SP_DropProveedorID(int id_proveedor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_DropProveedorID", ReplyAction="http://tempuri.org/IService/SP_DropProveedorIDResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_DropProveedorIDAsync(int id_proveedor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_DropProductosID", ReplyAction="http://tempuri.org/IService/SP_DropProductosIDResponse")]
+        System.Data.DataSet SP_DropProductosID();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_DropProductosID", ReplyAction="http://tempuri.org/IService/SP_DropProductosIDResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_DropProductosIDAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Sp_InsertaProducto", ReplyAction="http://tempuri.org/IService/Sp_InsertaProductoResponse")]
+        System.Data.DataSet Sp_InsertaProducto(string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Sp_InsertaProducto", ReplyAction="http://tempuri.org/IService/Sp_InsertaProductoResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> Sp_InsertaProductoAsync(string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Sp_ActualizarProducto", ReplyAction="http://tempuri.org/IService/Sp_ActualizarProductoResponse")]
+        System.Data.DataSet Sp_ActualizarProducto(int id_producto, string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle, bool estado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Sp_ActualizarProducto", ReplyAction="http://tempuri.org/IService/Sp_ActualizarProductoResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> Sp_ActualizarProductoAsync(int id_producto, string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle, bool estado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_UsuarioID", ReplyAction="http://tempuri.org/IService/SP_UsuarioIDResponse")]
+        System.Data.DataSet SP_UsuarioID(int Id_Usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_UsuarioID", ReplyAction="http://tempuri.org/IService/SP_UsuarioIDResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_UsuarioIDAsync(int Id_Usuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_RolUsuario", ReplyAction="http://tempuri.org/IService/SP_RolUsuarioResponse")]
         System.Data.DataSet SP_RolUsuario();
@@ -241,12 +277,20 @@ namespace WAVistas.WCFServices {
             return base.Channel.pa_MovimientosBuscarAsync(pa_buscar);
         }
         
-        public System.Data.DataSet pa_ProveedorInsertar(int pa_id, string pa_nombre, string pa_telefono, string pa_correo) {
-            return base.Channel.pa_ProveedorInsertar(pa_id, pa_nombre, pa_telefono, pa_correo);
+        public System.Data.DataSet SP_InsertarProveedor(string nombre, string contacto, string direccion, string telefono, string correo, string nit) {
+            return base.Channel.SP_InsertarProveedor(nombre, contacto, direccion, telefono, correo, nit);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> pa_ProveedorInsertarAsync(int pa_id, string pa_nombre, string pa_telefono, string pa_correo) {
-            return base.Channel.pa_ProveedorInsertarAsync(pa_id, pa_nombre, pa_telefono, pa_correo);
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_InsertarProveedorAsync(string nombre, string contacto, string direccion, string telefono, string correo, string nit) {
+            return base.Channel.SP_InsertarProveedorAsync(nombre, contacto, direccion, telefono, correo, nit);
+        }
+        
+        public System.Data.DataSet SP_ModificarProveedor(int id_proveedor, string nombre, string contacto, string direccion, string telefono, string correo, string nit, bool estado) {
+            return base.Channel.SP_ModificarProveedor(id_proveedor, nombre, contacto, direccion, telefono, correo, nit, estado);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_ModificarProveedorAsync(int id_proveedor, string nombre, string contacto, string direccion, string telefono, string correo, string nit, bool estado) {
+            return base.Channel.SP_ModificarProveedorAsync(id_proveedor, nombre, contacto, direccion, telefono, correo, nit, estado);
         }
         
         public System.Data.DataSet pa_ProveedorConsulta() {
@@ -297,12 +341,52 @@ namespace WAVistas.WCFServices {
             return base.Channel.SP_ValidarUsuarioAsync(Login, Password, Patron);
         }
         
-        public System.Data.DataSet SP_dsIdUsuario() {
-            return base.Channel.SP_dsIdUsuario();
+        public System.Data.DataSet SP_GridUsuarios() {
+            return base.Channel.SP_GridUsuarios();
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> SP_dsIdUsuarioAsync() {
-            return base.Channel.SP_dsIdUsuarioAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_GridUsuariosAsync() {
+            return base.Channel.SP_GridUsuariosAsync();
+        }
+        
+        public System.Data.DataSet SP_DropProveedorID(int id_proveedor) {
+            return base.Channel.SP_DropProveedorID(id_proveedor);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_DropProveedorIDAsync(int id_proveedor) {
+            return base.Channel.SP_DropProveedorIDAsync(id_proveedor);
+        }
+        
+        public System.Data.DataSet SP_DropProductosID() {
+            return base.Channel.SP_DropProductosID();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_DropProductosIDAsync() {
+            return base.Channel.SP_DropProductosIDAsync();
+        }
+        
+        public System.Data.DataSet Sp_InsertaProducto(string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle) {
+            return base.Channel.Sp_InsertaProducto(producto, fecha_caducidad, cantidad, id_material, id_uso, detalle);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> Sp_InsertaProductoAsync(string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle) {
+            return base.Channel.Sp_InsertaProductoAsync(producto, fecha_caducidad, cantidad, id_material, id_uso, detalle);
+        }
+        
+        public System.Data.DataSet Sp_ActualizarProducto(int id_producto, string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle, bool estado) {
+            return base.Channel.Sp_ActualizarProducto(id_producto, producto, fecha_caducidad, cantidad, id_material, id_uso, detalle, estado);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> Sp_ActualizarProductoAsync(int id_producto, string producto, System.DateTime fecha_caducidad, int cantidad, int id_material, int id_uso, string detalle, bool estado) {
+            return base.Channel.Sp_ActualizarProductoAsync(id_producto, producto, fecha_caducidad, cantidad, id_material, id_uso, detalle, estado);
+        }
+        
+        public System.Data.DataSet SP_UsuarioID(int Id_Usuario) {
+            return base.Channel.SP_UsuarioID(Id_Usuario);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_UsuarioIDAsync(int Id_Usuario) {
+            return base.Channel.SP_UsuarioIDAsync(Id_Usuario);
         }
         
         public System.Data.DataSet SP_RolUsuario() {

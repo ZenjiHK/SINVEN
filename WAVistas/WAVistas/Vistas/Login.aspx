@@ -23,9 +23,11 @@
                     <!-- Password -->
                     <asp:TextBox ID="txtPass" runat="server" type="password" class="form-control mb-4" placeholder="&#xf023; Contraseña" style="font-family: Arial, FontAwesome"/>
                     <!-- Sign in button -->
+                    <asp:CheckBox ID="chkRecordar" runat="server" />
 
                     <asp:Button ID="BtnEntrar" class="btn btn-info LoginBtn" runat="server" Text="Iniciar Sesion" OnClick="BtnEntrar_Click" />
                 </div>
+                <asp:Label ID="lblMensajes" runat="server" Text=""></asp:Label>
                 <!--Column for signin-->
                 <div class="col-sm-4 signup text-center">
                     <h2 class="HelloFriend">¡Bienvenido!</h2>

@@ -61,11 +61,17 @@
   <wsdl:message name="IService_pa_MovimientosBuscar_OutputMessage">
     <wsdl:part name="parameters" element="tns:pa_MovimientosBuscarResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_pa_ProveedorInsertar_InputMessage">
-    <wsdl:part name="parameters" element="tns:pa_ProveedorInsertar" />
+  <wsdl:message name="IService_SP_InsertarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_InsertarProveedor" />
   </wsdl:message>
-  <wsdl:message name="IService_pa_ProveedorInsertar_OutputMessage">
-    <wsdl:part name="parameters" element="tns:pa_ProveedorInsertarResponse" />
+  <wsdl:message name="IService_SP_InsertarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_InsertarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ModificarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ModificarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_ModificarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_ModificarProveedorResponse" />
   </wsdl:message>
   <wsdl:message name="IService_pa_ProveedorConsulta_InputMessage">
     <wsdl:part name="parameters" element="tns:pa_ProveedorConsulta" />
@@ -103,11 +109,41 @@
   <wsdl:message name="IService_SP_ValidarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:SP_ValidarUsuarioResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_SP_dsIdUsuario_InputMessage">
-    <wsdl:part name="parameters" element="tns:SP_dsIdUsuario" />
+  <wsdl:message name="IService_SP_GridUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_GridUsuarios" />
   </wsdl:message>
-  <wsdl:message name="IService_SP_dsIdUsuario_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SP_dsIdUsuarioResponse" />
+  <wsdl:message name="IService_SP_GridUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_GridUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_DropProveedorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_DropProveedorID" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_DropProveedorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_DropProveedorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_DropProductosID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_DropProductosID" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_DropProductosID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_DropProductosIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Sp_InsertaProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sp_InsertaProducto" />
+  </wsdl:message>
+  <wsdl:message name="IService_Sp_InsertaProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sp_InsertaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Sp_ActualizarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sp_ActualizarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IService_Sp_ActualizarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sp_ActualizarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_UsuarioID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_UsuarioID" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_UsuarioID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_UsuarioIDResponse" />
   </wsdl:message>
   <wsdl:message name="IService_SP_RolUsuario_InputMessage">
     <wsdl:part name="parameters" element="tns:SP_RolUsuario" />
@@ -170,9 +206,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_MovimientosBuscar" message="tns:IService_pa_MovimientosBuscar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_MovimientosBuscarResponse" message="tns:IService_pa_MovimientosBuscar_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="pa_ProveedorInsertar">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProveedorInsertar" message="tns:IService_pa_ProveedorInsertar_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_ProveedorInsertarResponse" message="tns:IService_pa_ProveedorInsertar_OutputMessage" />
+    <wsdl:operation name="SP_InsertarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_InsertarProveedor" message="tns:IService_SP_InsertarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_InsertarProveedorResponse" message="tns:IService_SP_InsertarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_ModificarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ModificarProveedor" message="tns:IService_SP_ModificarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ModificarProveedorResponse" message="tns:IService_SP_ModificarProveedor_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="pa_ProveedorConsulta">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_ProveedorConsulta" message="tns:IService_pa_ProveedorConsulta_InputMessage" />
@@ -198,9 +238,29 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ValidarUsuario" message="tns:IService_SP_ValidarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ValidarUsuarioResponse" message="tns:IService_SP_ValidarUsuario_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SP_dsIdUsuario">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_dsIdUsuario" message="tns:IService_SP_dsIdUsuario_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_dsIdUsuarioResponse" message="tns:IService_SP_dsIdUsuario_OutputMessage" />
+    <wsdl:operation name="SP_GridUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_GridUsuarios" message="tns:IService_SP_GridUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_GridUsuariosResponse" message="tns:IService_SP_GridUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_DropProveedorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_DropProveedorID" message="tns:IService_SP_DropProveedorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_DropProveedorIDResponse" message="tns:IService_SP_DropProveedorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_DropProductosID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_DropProductosID" message="tns:IService_SP_DropProductosID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_DropProductosIDResponse" message="tns:IService_SP_DropProductosID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sp_InsertaProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Sp_InsertaProducto" message="tns:IService_Sp_InsertaProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/Sp_InsertaProductoResponse" message="tns:IService_Sp_InsertaProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sp_ActualizarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Sp_ActualizarProducto" message="tns:IService_Sp_ActualizarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/Sp_ActualizarProductoResponse" message="tns:IService_Sp_ActualizarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_UsuarioID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_UsuarioID" message="tns:IService_SP_UsuarioID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_UsuarioIDResponse" message="tns:IService_SP_UsuarioID_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SP_RolUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_RolUsuario" message="tns:IService_SP_RolUsuario_InputMessage" />
@@ -302,8 +362,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="pa_ProveedorInsertar">
-      <soap:operation soapAction="http://tempuri.org/IService/pa_ProveedorInsertar" style="document" />
+    <wsdl:operation name="SP_InsertarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_InsertarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_ModificarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_ModificarProveedor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -365,8 +434,53 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SP_dsIdUsuario">
-      <soap:operation soapAction="http://tempuri.org/IService/SP_dsIdUsuario" style="document" />
+    <wsdl:operation name="SP_GridUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_GridUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_DropProveedorID">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_DropProveedorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_DropProductosID">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_DropProductosID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sp_InsertaProducto">
+      <soap:operation soapAction="http://tempuri.org/IService/Sp_InsertaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sp_ActualizarProducto">
+      <soap:operation soapAction="http://tempuri.org/IService/Sp_ActualizarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_UsuarioID">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_UsuarioID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

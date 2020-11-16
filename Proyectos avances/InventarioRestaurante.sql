@@ -5,6 +5,7 @@ use InventarioRestaurante;
 --Tabla para los Roles de nuestro Login
 
 	  --Tabla para los Roles de nuestro Login
+go
 CREATE TABLE Roles
 (
     cod_rol int identity(1,1) primary key,
@@ -16,6 +17,7 @@ insert into Roles(Nombre_rol) VALUES ('Dueño');
 insert into Roles(Nombre_rol) VALUES ('Bodega');
 insert into Roles(Nombre_rol) VALUES ('Gerente');
 
+go
 create table Usuarios (
 	  Id_Usuario int primary key  identity (1,1),
 	  Nombre varchar(50),
@@ -27,7 +29,7 @@ create table Usuarios (
 	  constraint fk_roles FOREIGN KEY (cod_rol) REFERENCES Roles(cod_rol)
 )
 
-select * from Usuarios
+
 
 insert into Usuarios(Nombre,Login, Password,Estado,cod_rol) values ('Rodrigo Rivera','RR',123,1,1);
 insert into Usuarios(Nombre,Login, Password,Estado,cod_rol) values ('Jocelyn Castellanos','JC',123,1,2);
@@ -385,6 +387,9 @@ End
 --Invocando y ejecutando el Stored Procedure (SP) SP_AgregarUsuario
 Exec SP_AgregarUsuario 'Benito','B','123',1,1,'An@71515'
 
+
+select * from usuarios 
+
 --Crear procedimiento almacenado para modificar usuarios
 GO
 Create Procedure SP_ModificarUsuario
@@ -426,6 +431,38 @@ Exec SP_ModificarUsuario 5,'Benito Rivera','BR','123',1,2,'An@71515'
 		-- si no existe que me devuelva un -1 
 			Select 'No Existe' Id_Usuario
 	End
+
+go
+Create procedure SP_GridUsuarios
+as
+begin
+select * from Usuarios
+end
+
+
+
+go
+create procedure SP_RolUsuario
+as
+begin
+select  * from Roles
+end
+
+
+go
+Create procedure SP_UsuarioID
+@Id_Usuario int
+as
+begin
+select  Nombre,Login,Convert(varchar(50),DECRYPTBYPASSPHRASE('An@71515',Password))as Password ,Estado,cod_rol from Usuarios where Id_Usuario=@Id_Usuario
+end
+
+
+
+
+
+
+
 -- procedimientos para catalogos
 go
 create procedure SP_ListCategoria

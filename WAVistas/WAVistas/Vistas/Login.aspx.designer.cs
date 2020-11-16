@@ -42,6 +42,15 @@ namespace WAVistas
         protected global::System.Web.UI.WebControls.TextBox txtPass;
 
         /// <summary>
+        /// Control chkRecordar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkRecordar;
+
+        /// <summary>
         /// Control BtnEntrar.
         /// </summary>
         /// <remarks>
@@ -49,5 +58,14 @@ namespace WAVistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnEntrar;
+
+        /// <summary>
+        /// Control lblMensajes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensajes;
     }
 }
