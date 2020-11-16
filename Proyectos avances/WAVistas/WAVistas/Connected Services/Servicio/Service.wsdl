@@ -103,6 +103,18 @@
   <wsdl:message name="IService_SP_ValidarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:SP_ValidarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_SP_dsIdUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_dsIdUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_dsIdUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_dsIdUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_RolUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_RolUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService_SP_RolUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_RolUsuarioResponse" />
+  </wsdl:message>
   <wsdl:message name="IService_SP_ListCategoria_InputMessage">
     <wsdl:part name="parameters" element="tns:SP_ListCategoria" />
   </wsdl:message>
@@ -120,6 +132,12 @@
   </wsdl:message>
   <wsdl:message name="IService_pa_TopDiez_OutputMessage">
     <wsdl:part name="parameters" element="tns:pa_TopDiezResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_MasPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MasPedidos" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_MasPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MasPedidosResponse" />
   </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="pa_stockProductosMovimientos">
@@ -186,6 +204,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ValidarUsuario" message="tns:IService_SP_ValidarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ValidarUsuarioResponse" message="tns:IService_SP_ValidarUsuario_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="SP_dsIdUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_dsIdUsuario" message="tns:IService_SP_dsIdUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_dsIdUsuarioResponse" message="tns:IService_SP_dsIdUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_RolUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_RolUsuario" message="tns:IService_SP_RolUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_RolUsuarioResponse" message="tns:IService_SP_RolUsuario_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="SP_ListCategoria">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SP_ListCategoria" message="tns:IService_SP_ListCategoria_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SP_ListCategoriaResponse" message="tns:IService_SP_ListCategoria_OutputMessage" />
@@ -197,6 +223,10 @@
     <wsdl:operation name="pa_TopDiez">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_TopDiez" message="tns:IService_pa_TopDiez_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_TopDiezResponse" message="tns:IService_pa_TopDiez_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_MasPedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_MasPedidos" message="tns:IService_pa_MasPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_MasPedidosResponse" message="tns:IService_pa_MasPedidos_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -345,6 +375,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SP_dsIdUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_dsIdUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_RolUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService/SP_RolUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SP_ListCategoria">
       <soap:operation soapAction="http://tempuri.org/IService/SP_ListCategoria" style="document" />
       <wsdl:input>
@@ -365,6 +413,15 @@
     </wsdl:operation>
     <wsdl:operation name="pa_TopDiez">
       <soap:operation soapAction="http://tempuri.org/IService/pa_TopDiez" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_MasPedidos">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_MasPedidos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

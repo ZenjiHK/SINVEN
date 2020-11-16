@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WAVistas
+namespace WAVistas.Vistas
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Movimientos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("Menu.aspx");
+
         }
     }
 }

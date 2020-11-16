@@ -116,12 +116,14 @@
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Vistas\Login.aspx" />
     <Content Include="Estilos\Login.css" />
+    <Content Include="Vistas\MasPedidos.aspx" />
     <Content Include="Vistas\Menu.aspx" />
+    <Content Include="Vistas\Movimientos.aspx" />
     <Content Include="Vistas\Plantilla.html" />
     <Content Include="Vistas\Productos.aspx" />
     <Content Include="Vistas\Proveedores.aspx" />
     <Content Include="Vistas\Usuarios.aspx" />
-    <Content Include="Vistas\VistaReportes.aspx" />
+    <Content Include="Vistas\TopDiez.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +131,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Pedidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pedidos.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\Productos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -150,12 +157,26 @@
     <Compile Include="Vistas\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\MasPedidos.aspx.cs">
+      <DependentUpon>MasPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\MasPedidos.aspx.designer.cs">
+      <DependentUpon>MasPedidos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Vistas\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Movimientos.aspx.cs">
+      <DependentUpon>Movimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Movimientos.aspx.designer.cs">
+      <DependentUpon>Movimientos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Plantilla.Master.cs">
       <DependentUpon>Plantilla.Master</DependentUpon>
@@ -186,12 +207,12 @@
     <Compile Include="Vistas\Usuarios.aspx.designer.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\VistaReportes.aspx.cs">
-      <DependentUpon>VistaReportes.aspx</DependentUpon>
+    <Compile Include="Vistas\TopDiez.aspx.cs">
+      <DependentUpon>TopDiez.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\VistaReportes.aspx.designer.cs">
-      <DependentUpon>VistaReportes.aspx</DependentUpon>
+    <Compile Include="Vistas\TopDiez.aspx.designer.cs">
+      <DependentUpon>TopDiez.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +232,17 @@
     <Content Include="Reportes\Productos.xsc">
       <DependentUpon>Productos.xsd</DependentUpon>
     </Content>
+    <Content Include="Reportes\Pedidos.xsc">
+      <DependentUpon>Pedidos.xsd</DependentUpon>
+    </Content>
+    <None Include="Reportes\Pedidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pedidos.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reportes\Pedidos.xss">
+      <DependentUpon>Pedidos.xsd</DependentUpon>
+    </Content>
     <None Include="Reportes\Productos.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -227,7 +259,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\ReportePrueba.rdlc" />
+    <EmbeddedResource Include="Reportes\Pedidos.rdlc" />
+    <EmbeddedResource Include="Reportes\Productos.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

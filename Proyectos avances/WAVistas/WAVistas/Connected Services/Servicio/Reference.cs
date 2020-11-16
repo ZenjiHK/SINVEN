@@ -111,6 +111,18 @@ namespace WAVistas.Servicio {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_ValidarUsuario", ReplyAction="http://tempuri.org/IService/SP_ValidarUsuarioResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> SP_ValidarUsuarioAsync(string Login, string Password, string Patron);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_dsIdUsuario", ReplyAction="http://tempuri.org/IService/SP_dsIdUsuarioResponse")]
+        System.Data.DataSet SP_dsIdUsuario();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_dsIdUsuario", ReplyAction="http://tempuri.org/IService/SP_dsIdUsuarioResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_dsIdUsuarioAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_RolUsuario", ReplyAction="http://tempuri.org/IService/SP_RolUsuarioResponse")]
+        System.Data.DataSet SP_RolUsuario();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_RolUsuario", ReplyAction="http://tempuri.org/IService/SP_RolUsuarioResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> SP_RolUsuarioAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SP_ListCategoria", ReplyAction="http://tempuri.org/IService/SP_ListCategoriaResponse")]
         System.Data.DataSet SP_ListCategoria();
         
@@ -124,10 +136,16 @@ namespace WAVistas.Servicio {
         System.Threading.Tasks.Task<System.Data.DataSet> SP_ListMaterialAsync(int id_categoria);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_TopDiez", ReplyAction="http://tempuri.org/IService/pa_TopDiezResponse")]
-        System.Data.DataSet pa_TopDiez();
+        System.Data.DataSet pa_TopDiez(int anio);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_TopDiez", ReplyAction="http://tempuri.org/IService/pa_TopDiezResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync(int anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_MasPedidos", ReplyAction="http://tempuri.org/IService/pa_MasPedidosResponse")]
+        System.Data.DataSet pa_MasPedidos(int anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_MasPedidos", ReplyAction="http://tempuri.org/IService/pa_MasPedidosResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> pa_MasPedidosAsync(int anio);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -285,6 +303,22 @@ namespace WAVistas.Servicio {
             return base.Channel.SP_ValidarUsuarioAsync(Login, Password, Patron);
         }
         
+        public System.Data.DataSet SP_dsIdUsuario() {
+            return base.Channel.SP_dsIdUsuario();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_dsIdUsuarioAsync() {
+            return base.Channel.SP_dsIdUsuarioAsync();
+        }
+        
+        public System.Data.DataSet SP_RolUsuario() {
+            return base.Channel.SP_RolUsuario();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> SP_RolUsuarioAsync() {
+            return base.Channel.SP_RolUsuarioAsync();
+        }
+        
         public System.Data.DataSet SP_ListCategoria() {
             return base.Channel.SP_ListCategoria();
         }
@@ -301,12 +335,20 @@ namespace WAVistas.Servicio {
             return base.Channel.SP_ListMaterialAsync(id_categoria);
         }
         
-        public System.Data.DataSet pa_TopDiez() {
-            return base.Channel.pa_TopDiez();
+        public System.Data.DataSet pa_TopDiez(int anio) {
+            return base.Channel.pa_TopDiez(anio);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync() {
-            return base.Channel.pa_TopDiezAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync(int anio) {
+            return base.Channel.pa_TopDiezAsync(anio);
+        }
+        
+        public System.Data.DataSet pa_MasPedidos(int anio) {
+            return base.Channel.pa_MasPedidos(anio);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> pa_MasPedidosAsync(int anio) {
+            return base.Channel.pa_MasPedidosAsync(anio);
         }
     }
 }

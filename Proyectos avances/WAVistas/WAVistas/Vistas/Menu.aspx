@@ -104,20 +104,20 @@
                 <div class="card card-flip h-100">
                     <div class="card-front text-white">
                         <div class="card-body">
-                            <img src="https://image.freepik.com/free-vector/supermarket-basket-isometric_1284-4419.jpg" alt="Avatar" style="width: 100%; height: 100%;">
+                            <img src="https://image.freepik.com/free-vector/pack-direction-arrows-isometric_9206-1188.jpg" alt="Avatar" style="width: 100%; height: 100%;">
                             <div class="text-block">
-                                <h5>Productos</h5>
+                                <h5>Movimientos</h5>
                             </div>
                         </div>
                     </div>
                     <div class="card-back text-center bg-white">
                         <div class="card-body centro text-primary">
-                            <h3 class="card-title">Productos</h3>
+                            <h3 class="card-title">Movimientos</h3>
                             <hr />
                             <label style="font-weight: normal; padding-bottom: 10px">
-                                Puede ver todos los productos registrados, insertar nuevos, actualizar los que ya están registrados, o darlos de baja.
+                                Bitácora para poder ver todos los movimientos que se han realizado por producto. No es posible editar ni eliminar registros.
                             </label>
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Ver Productos</button>
+                            <a href="Movimientos.aspx" class="btn btn-primary btn-lg btn-block" role="button">Ver Movimientos</a>
                         </div>
                     </div>
                 </div>

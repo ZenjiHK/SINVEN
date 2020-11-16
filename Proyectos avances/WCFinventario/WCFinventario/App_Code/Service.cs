@@ -481,13 +481,30 @@ public class Service : IService
 		}
 	}
 
-	public DataSet pa_TopDiez()
+	public DataSet pa_TopDiez(int @anio)
 	{
 		try
 		{
 			da = new SqlDataAdapter("SP_TopDiez", Conexion);
 			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.SelectCommand.Parameters.AddWithValue("@anio", @anio);
 			da.Fill(ds, "SP_TopDiez");
+			return ds;
+		}
+		catch (Exception)
+		{//Enviar correo al administrador o al programador del error ocurrido
+			return null;
+		}
+	}
+
+	public DataSet pa_MasPedidos(int @anio)
+	{
+		try
+		{
+			da = new SqlDataAdapter("SP_MasPedidos", Conexion);
+			da.SelectCommand.CommandType = CommandType.StoredProcedure;
+			da.SelectCommand.Parameters.AddWithValue("@anio", @anio);
+			da.Fill(ds, "SP_MasPedidos");
 			return ds;
 		}
 		catch (Exception)

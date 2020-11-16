@@ -76,8 +76,10 @@ public interface IService
 	DataSet SP_ListMaterial(int @id_categoria);
 
 	[OperationContract]
-	DataSet pa_TopDiez();
+	DataSet pa_TopDiez(int @anio);
 
+	[OperationContract]
+	DataSet pa_MasPedidos(int @anio);
 	// TODO: agregue aquí sus operaciones de servicio
 }
 

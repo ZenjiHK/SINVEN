@@ -486,11 +486,22 @@ select * from Productos
 
 go
 create procedure SP_TopDiez
+@anio int
 as
 begin
 select top(10)p.producto as 'Producto', cast(sum(m.cantidad) as int) as 'Total_Pedido' from Movimientos m
 inner join Productos p on p.id_producto = m.id_producto
+where year(m.fecha) = @anio
 group by p.producto order by sum(m.cantidad) desc
 end
 
-drop procedure SP_TopDiez
+--drop procedure SP_TopDiez
+
+go 
+create procedure SP_MasPedidos
+@anio int
+as
+begin
+select datename(MONTH, fecha) as 'Mes',count(id_movimiento) as 'Total' 
+from Movimientos where year(fecha) = @anio group by month(fecha), fecha
+end
