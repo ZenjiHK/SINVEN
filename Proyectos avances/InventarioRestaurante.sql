@@ -265,6 +265,42 @@ else
 
 END
 
+
+
+--Revisar y crear
+GO
+CREATE PROCEDURE Sp_InsertaProducto
+@producto varchar(50),
+@fecha_caducidad date,
+@cantidad int,
+@id_material int,
+@id_uso int,
+@detalle varchar(200)
+as
+Begin
+insert into productos(producto,fecha_caducidad,cantidad,id_material,id_uso,detalle)
+values(@producto,@fecha_caducidad,@cantidad,@id_material,@id_uso,@detalle);
+end
+
+--Revisar y crear
+GO
+CREATE PROCEDURE Sp_ActualizarProducto
+@id_producto int,
+@producto varchar(50),
+@fecha_caducidad date,
+@cantidad int,
+@id_material int,
+@id_uso int,
+@detalle varchar(200),
+@estado bit
+as
+Begin
+update Productos set producto=@producto,fecha_caducidad=@fecha_caducidad,cantidad=@cantidad,id_material=@id_material,id_uso=@id_uso,detalle=@detalle,estado=@estado
+    where id_producto = id_producto;
+
+end
+
+
 GO
 CREATE PROCEDURE pa_ProductoEliminarByID(@pa_id int)
 as
@@ -272,6 +308,14 @@ BEGIN
 delete from productos where id_producto  = @pa_id;
 END
 
+--Revisar crear
+GO
+CREATE PROCEDURE SP_DropProductosID
+@id_producto int
+as
+Begin
+DELETE FROM productos WHERE id_producto=@id_producto
+end
 
 
 
@@ -315,25 +359,46 @@ or mo.cantidad like concat('%',@pa_buscar,'%')
 or c.categoria like concat('%',@pa_buscar,'%');
 END
 
-select * from producto
+select * from productos
+
 GO
-CREATE PROCEDURE pa_ProveedorInsertar
-@pa_id int,
-@pa_nombre varchar(50),
-@pa_telefono varchar(50), 
-@pa_correo varchar(50)
+CREATE PROCEDURE SP_InsertarProveedor
+@nombre varchar(50),
+@contacto varchar(50),
+@direccion varchar(200), 
+@telefono varchar(50),
+@correo varchar(50),
+@nit varchar(20)
 as
 BEGIN
-if @pa_id = 0 
-insert into proveedores (nombre,telefono,correo) 
-values(@pa_nombre,@pa_telefono,@pa_correo);
-else
-update proveedor set
-	nombre=@pa_nombre,
-    telefono = @pa_telefono,
-    correo = @pa_correo
-    where id_proveedor = @pa_id;
+insert into Proveedores (nombre,contacto,direccion,telefono,correo,nit) 
+values(@nombre,@contacto,@direccion,@telefono,@correo,@nit);
 END
+
+--Revisar y crear
+GO
+CREATE PROCEDURE SP_ModificarProveedor
+@id_proveedor int,
+@nombre varchar(50),
+@contacto varchar(50),
+@direccion varchar(200), 
+@telefono varchar(50),
+@correo varchar(50),
+@nit varchar(20),
+@estado bit
+as
+BEGIN
+update Proveedores set nombre=@nombre,contacto=@contacto,direccion=@direccion,telefono=@telefono,correo=@correo,nit=@nit,estado=@estado where id_proveedor=@id_proveedor
+end 
+
+--Revisar y crear
+GO
+CREATE PROCEDURE SP_DropProveedorID
+@id_proveedor int
+as
+Begin
+DELETE FROM Proveedores WHERE id_proveedor=@id_proveedor
+end
 
 GO
 CREATE PROCEDURE pa_ProveedorConsulta
@@ -363,7 +428,7 @@ as
 BEGIN
 delete from proveedores where id_proveedor = @pa_id;
 END
--- drop database inventariorestaurante;
+
 
 --Crear procedimiento almacenado para agregar usuarios o administrar los Usuarios
 GO
@@ -457,12 +522,6 @@ begin
 select  Nombre,Login,Convert(varchar(50),DECRYPTBYPASSPHRASE('An@71515',Password))as Password ,Estado,cod_rol from Usuarios where Id_Usuario=@Id_Usuario
 end
 
-
-
-
-
-
-
 -- procedimientos para catalogos
 go
 create procedure SP_ListCategoria
@@ -470,6 +529,7 @@ as
 begin
 select* from Categorias
 end
+
 go
 create procedure SP_ListMaterial
 @id_categoria int
