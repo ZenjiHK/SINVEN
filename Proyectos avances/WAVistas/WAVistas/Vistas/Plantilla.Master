@@ -72,7 +72,7 @@
                             <li><a href="Productos.aspx"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Productos</a></li>
                             <li><a href="Compras.aspx"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Compra de productos</a></li>
                             <li><a href="Usuarios.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;Usuarios</a></li>
-                            <li><a href="Movimientos.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;Movimientos</a></li>
+                            <li><a href="Movimientos.aspx"><span class="glyphicon glyphicon-transfer"></span>&nbsp;Movimientos</a></li>
                         </ul>
                     </div>
                 </div>
