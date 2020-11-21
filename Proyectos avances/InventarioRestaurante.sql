@@ -267,7 +267,7 @@ END
 
 
 
---Revisar y crear
+--Revisar 
 GO
 CREATE PROCEDURE Sp_InsertaProducto
 @producto varchar(50),
@@ -282,9 +282,9 @@ insert into productos(producto,fecha_caducidad,cantidad,id_material,id_uso,detal
 values(@producto,@fecha_caducidad,@cantidad,@id_material,@id_uso,@detalle);
 end
 
---Revisar y crear
+--Revisar 
 GO
-CREATE PROCEDURE Sp_ActualizarProducto
+Alter PROCEDURE Sp_ActualizarProducto
 @id_producto int,
 @producto varchar(50),
 @fecha_caducidad date,
@@ -296,7 +296,7 @@ CREATE PROCEDURE Sp_ActualizarProducto
 as
 Begin
 update Productos set producto=@producto,fecha_caducidad=@fecha_caducidad,cantidad=@cantidad,id_material=@id_material,id_uso=@id_uso,detalle=@detalle,estado=@estado
-    where id_producto = id_producto;
+    where id_producto = @id_producto;
 
 end
 
@@ -308,7 +308,7 @@ BEGIN
 delete from productos where id_producto  = @pa_id;
 END
 
---Revisar crear
+--Revisar
 GO
 CREATE PROCEDURE SP_DropProductosID
 @id_producto int
@@ -375,7 +375,7 @@ insert into Proveedores (nombre,contacto,direccion,telefono,correo,nit)
 values(@nombre,@contacto,@direccion,@telefono,@correo,@nit);
 END
 
---Revisar y crear
+--Revisar 
 GO
 CREATE PROCEDURE SP_ModificarProveedor
 @id_proveedor int,
@@ -391,7 +391,7 @@ BEGIN
 update Proveedores set nombre=@nombre,contacto=@contacto,direccion=@direccion,telefono=@telefono,correo=@correo,nit=@nit,estado=@estado where id_proveedor=@id_proveedor
 end 
 
---Revisar y crear
+--Revisar 
 GO
 CREATE PROCEDURE SP_DropProveedorID
 @id_proveedor int
@@ -565,3 +565,22 @@ begin
 select datename(MONTH, fecha) as 'Mes',count(id_movimiento) as 'Total' 
 from Movimientos where year(fecha) = @anio group by month(fecha), fecha
 end
+
+
+--Revisar
+go 
+create procedure SP_DropProveedorID
+@id_proveedor int
+as
+begin
+select* from Proveedores where id_proveedor=@id_proveedor
+end
+
+go 
+create procedure SP_DropProductosID
+as
+begin
+select* from Productos
+end
+
+

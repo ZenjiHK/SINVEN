@@ -52,10 +52,10 @@ public interface IService
 	[OperationContract]
 	DataSet SP_GridUsuarios();
 
-	[OperationContract]
+	[OperationContract]////////
 	DataSet SP_DropProveedorID(int @id_proveedor);
 
-	[OperationContract]
+	[OperationContract]/////
 	DataSet SP_DropProductosID();
 
 	[OperationContract]

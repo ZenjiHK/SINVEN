@@ -31,7 +31,7 @@
                 <!--Column for signin-->
                 <div class="col-sm-4 signup text-center">
                     <h2 class="HelloFriend">¡Bienvenido!</h2>
-                    <h4 class="SignupText">En SINVEN, serás capaz de administrar el inventario de tu restaurante de manera sencilla<br /><br />
+                    <h4 class="SignupText">Binvenido al Login del Restaurante el Nuevo Bosque, serás capaz de administrar de manera sencilla<br /><br />
                         Inicia sesión para que puedas acceder a todas sus funcionalidades</h4>
                 </div>
             </div>

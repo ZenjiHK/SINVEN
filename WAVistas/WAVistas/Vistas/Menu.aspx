@@ -5,9 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main-content" style="font-family: 'Noto Sans JP', sans-serif;">
         <div class="page-header text-center">
-            <h1 style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold">¡BIENVENIDO [Inserte nombre de usuario]!  <span class="glyphicon glyphicon-user"></span></h1>
+            <h1 style="font-family: 'Noto Sans JP', sans-serif;font-weight: bold">¡BIENVENIDO []!  <span class="glyphicon glyphicon-user"></span></h1>
             <br />
-            <h3 style="font-family: 'Noto Sans JP', sans-serif;font-weight: normal;">En SIVEN, podrá administrar los recursos de su inventario de forma rápida y sencilla.</h3>
+            <h3 style="font-family: 'Noto Sans JP', sans-serif;font-weight: normal;">Al Restaurante El Nuevo Bosque.</h3>
         </div>
         <div class="row">
             <div class="col-md-1"></div>
