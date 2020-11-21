@@ -52,6 +52,7 @@
                 </div>
                 <br />
                 <a class="btn btn-primary btn-block" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="true" aria-controls="multiCollapseExample1">Actualizar Producto</a>
+                <br />
                 <div class="col">
                     <div class="collapse multi-collapse" id="multiCollapseExample2">
                         <div class="card card-body">
