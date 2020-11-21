@@ -169,6 +169,12 @@
   <wsdl:message name="IService_pa_TopDiez_OutputMessage">
     <wsdl:part name="parameters" element="tns:pa_TopDiezResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_pa_MasPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MasPedidos" />
+  </wsdl:message>
+  <wsdl:message name="IService_pa_MasPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pa_MasPedidosResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="pa_stockProductosMovimientos">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_stockProductosMovimientos" message="tns:IService_pa_stockProductosMovimientos_InputMessage" />
@@ -277,6 +283,10 @@
     <wsdl:operation name="pa_TopDiez">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_TopDiez" message="tns:IService_pa_TopDiez_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_TopDiezResponse" message="tns:IService_pa_TopDiez_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pa_MasPedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/pa_MasPedidos" message="tns:IService_pa_MasPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/pa_MasPedidosResponse" message="tns:IService_pa_MasPedidos_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -517,6 +527,15 @@
     </wsdl:operation>
     <wsdl:operation name="pa_TopDiez">
       <soap:operation soapAction="http://tempuri.org/IService/pa_TopDiez" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pa_MasPedidos">
+      <soap:operation soapAction="http://tempuri.org/IService/pa_MasPedidos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

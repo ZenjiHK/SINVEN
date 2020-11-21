@@ -172,10 +172,16 @@ namespace WAVistas.WCFServices {
         System.Threading.Tasks.Task<System.Data.DataSet> SP_ListMaterialAsync(int id_categoria);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_TopDiez", ReplyAction="http://tempuri.org/IService/pa_TopDiezResponse")]
-        System.Data.DataSet pa_TopDiez();
+        System.Data.DataSet pa_TopDiez(int anio);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_TopDiez", ReplyAction="http://tempuri.org/IService/pa_TopDiezResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync(int anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_MasPedidos", ReplyAction="http://tempuri.org/IService/pa_MasPedidosResponse")]
+        System.Data.DataSet pa_MasPedidos(int anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/pa_MasPedidos", ReplyAction="http://tempuri.org/IService/pa_MasPedidosResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> pa_MasPedidosAsync(int anio);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -413,12 +419,20 @@ namespace WAVistas.WCFServices {
             return base.Channel.SP_ListMaterialAsync(id_categoria);
         }
         
-        public System.Data.DataSet pa_TopDiez() {
-            return base.Channel.pa_TopDiez();
+        public System.Data.DataSet pa_TopDiez(int anio) {
+            return base.Channel.pa_TopDiez(anio);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync() {
-            return base.Channel.pa_TopDiezAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> pa_TopDiezAsync(int anio) {
+            return base.Channel.pa_TopDiezAsync(anio);
+        }
+        
+        public System.Data.DataSet pa_MasPedidos(int anio) {
+            return base.Channel.pa_MasPedidos(anio);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> pa_MasPedidosAsync(int anio) {
+            return base.Channel.pa_MasPedidosAsync(anio);
         }
     }
 }
